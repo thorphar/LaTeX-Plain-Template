@@ -1,0 +1,74 @@
+\documentclass[11pt,a4paper]{article} %Can change if need to print to different size
+\usepackage[a4paper,left=1cm,right=1cm,top=1 cm,bottom=1.5cm]{geometry} % School Style Guide
+\renewcommand{\thesection}{\arabic{section}} % Used to set the page numbering and section numbering to 1 rather than I 
+\usepackage{listings} % used as part of the code syntax highlighting 
+\usepackage{mathptmx}% General Math Lib
+\usepackage{titlesec} % Used when setting the font for the sections
+\titleformat*{\section}{\centering
+			\bfseries}
+\usepackage{subfiles}
+
+\usepackage[
+    backend=biber,
+    style=authoryear-icomp,
+    sortlocale=de_DE,
+    natbib=true,
+    url=false, 
+    doi=true,
+    eprint=false
+]{biblatex}
+\addbibresource{references.bib}
+
+
+\usepackage[]{hyperref}
+\hypersetup{
+    colorlinks=true,
+}
+
+\begin{document}
+
+  % --- START OF << TITLE >>> ---
+  \title{\textbf{Academic Paper – Robotics}}
+  \author{} %No author needed
+  \date{\parbox{\linewidth}{\centering%
+    \vspace*{1cm}\small
+    Harry Thorpe\endgraf
+    \vspace*{0.2cm}
+    BSc Robotics, h.thorpe@student.reading.ac.uk \endgraf
+  \endgraf\medskip}}
+  % --- END OF << TITLE >>> ---
+  
+  \maketitle % Make the title and print to the screen
+
+  % --- START OF THE MAIN CONTENT ---
+  \begin{abstract}
+  This is the report abstract.
+  
+  \cite{quant}
+  
+  \end{abstract}
+
+  \section{Introduction}
+  \subfile{sections/intro}
+
+  \section{Development}
+  \subfile{sections/dev}
+
+  \section{Results}
+  \subfile{sections/results}
+
+  \section{Discussion of Results}
+  \subfile{sections/dis}
+
+  \section{Conclusion}
+  \subfile{sections/conclusion}
+
+
+   % --- END OF THE MAIN CONTENT ---
+
+   % --- References ---
+   \printbibliography
+   
+   % --- Appendix ---
+   
+ \end{document}

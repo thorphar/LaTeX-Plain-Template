@@ -1,0 +1,26 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,left=1cm,right=1cm,top=1 cm,bottom=1.5cm]{geometry}
+\renewcommand{\thesection}{\arabic{section}}
+\usepackage{listings}
+\usepackage{mathptmx}% http://ctan.org/pkg/mathptmx
+
+\begin{document}
+ \title{Report} 
+ \author{Harry Thorpe}
+ 
+ \maketitle
+ 
+ \begin{abstract}
+  This is the report abstract.
+ \end{abstract}
+ 
+ \section{Introduction}
+ This is the report Introduction.
+ 
+ \subsection{Sub-Introduction}
+ This is a sub section of the Introduction.
+ 
+ \section{Conclusion}
+
+ 
+ \end{document}
